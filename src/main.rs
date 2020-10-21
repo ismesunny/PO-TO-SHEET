@@ -5,11 +5,9 @@ use std::fs::File;
 use std::env;
 
 fn main(){
-    // let import_name = "konsole.po";
-    // let export_name = "test.csv";
 
-    let import_name = "file/original_file/konsole.po";
-    let export_name = "file/converted_file/test.csv";
+    let import_name = "import filelocation or name";
+    let export_name = "export filelocation or name";
 
     let program = "node";
    
@@ -24,7 +22,6 @@ fn main(){
     .stderr(Stdio::from(errors))
     .spawn();
 
-    println!("status : {:#?}", status);
-
+    //println!("status : {:#?}", status);
 }
 
