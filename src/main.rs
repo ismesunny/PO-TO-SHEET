@@ -6,14 +6,14 @@ use std::env;
 
 fn main(){
 
-    let import_name = "import filelocation or name";
-    let export_name = "export filelocation or name";
+    let import_name = "name file in /data/import"; //example /data/import/name.po
+    let export_name = "name file in data/export";  //example /data/export/name.csv
 
     let program = "node";
    
     let outputs = File::create(export_name).unwrap();
     let errors = outputs.try_clone().unwrap();
-    let status =
+    let _status =
      
     Command::new(program)
     .args(&[format!("{}/index.js",env::current_dir().unwrap().display()),
